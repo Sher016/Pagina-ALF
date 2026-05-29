@@ -1,0 +1,22 @@
+.location-section {
+  background: var(--bg-dark);
+  color: var(--text-light);
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.location-title {
+  font-family: var(--font-headline);
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  margin-bottom: 1.5rem;
+}
+
+.map-container {
+  max-width: 960px;
+  margin: 0 auto;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
