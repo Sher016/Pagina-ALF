@@ -1,19 +1,31 @@
-import './Navbar.css'
+import "./Navbar.css";
 import { FaWhatsapp } from "react-icons/fa";
-import { useState } from 'react';
-import { useNavbar} from './Navbar.hook.ts'
-import  type { NavLink } from './Navbar.hook.ts'
-import { Link } from 'react-router-dom'
+import { useState } from "react";
+import { useNavbar } from "./Navbar.hook.ts";
+import type { NavLink } from "./Navbar.hook.ts";
+import { Link } from "react-router-dom";
 
-function NavLinkItem({ link, className, onClick }: {
+function NavLinkItem({
+  link,
+  className,
+  onClick,
+}: {
   link: NavLink;
   className: string;
   onClick?: () => void;
 }) {
-  if (link.type === 'scroll') {
-    return <a href={link.path} className={className} onClick={onClick}>{link.label}</a>;
+  if (link.type === "scroll") {
+    return (
+      <a href={link.path} className={className} onClick={onClick}>
+        {link.label}
+      </a>
+    );
   }
-  return <Link to={link.path} className={className} onClick={onClick}>{link.label}</Link>;
+  return (
+    <Link to={link.path} className={className} onClick={onClick}>
+      {link.label}
+    </Link>
+  );
 }
 
 export function Navbar() {
@@ -25,7 +37,13 @@ export function Navbar() {
   return (
     <>
       <header className="site-header">
-        <div className="brand">ALF electricals</div>
+        <div className="brand">
+          <img
+            src="/src/assets/images/LogoRemoved.png"
+            alt="ALF Ingeniería Eléctrica"
+            className="brand-logo"
+          />
+        </div>
 
         <nav className="nav-links desktop-nav">
           {navLinks.map((link) => (
@@ -33,25 +51,45 @@ export function Navbar() {
           ))}
         </nav>
 
-        <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer"
-          className="whatsapp-button desktop-cta">
-          <FaWhatsapp size={20} style={{ marginRight: '0.5rem' }} />
+        <a
+          href={WHATSAPP_LINK}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="whatsapp-button desktop-cta"
+        >
+          <FaWhatsapp size={20} style={{ marginRight: "0.5rem" }} />
           Adquirir servicio
         </a>
 
-        <button className="menu-toggle" onClick={() => setIsMenuOpen(prev => !prev)}
-          aria-label="Toggle navigation menu" aria-expanded={isMenuOpen}>
-          <span /><span /><span />
+        <button
+          className="menu-toggle"
+          onClick={() => setIsMenuOpen((prev) => !prev)}
+          aria-label="Toggle navigation menu"
+          aria-expanded={isMenuOpen}
+        >
+          <span />
+          <span />
+          <span />
         </button>
       </header>
 
-      <nav className={`mobile-menu ${isMenuOpen ? 'open' : ''}`}>
+      <nav className={`mobile-menu ${isMenuOpen ? "open" : ""}`}>
         {navLinks.map((link) => (
-          <NavLinkItem key={link.label} link={link} className="mobile-nav-link" onClick={closeMenu} />
+          <NavLinkItem
+            key={link.label}
+            link={link}
+            className="mobile-nav-link"
+            onClick={closeMenu}
+          />
         ))}
-        <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer"
-          className="mobile-cta-button" onClick={closeMenu}>
-          <FaWhatsapp size={18} style={{ marginRight: '0.5rem' }} />
+        <a
+          href={WHATSAPP_LINK}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mobile-cta-button"
+          onClick={closeMenu}
+        >
+          <FaWhatsapp size={18} style={{ marginRight: "0.5rem" }} />
           Asesoría Gratis
         </a>
       </nav>

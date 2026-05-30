@@ -1,0 +1,165 @@
+.team-section {
+  padding: clamp(3rem, 8vw, 6rem) clamp(1.5rem, 6vw, 5rem);
+  background: var(--bg-dark);
+}
+
+/* ── Header ─────────────────────────────────────── */
+.team-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 2rem;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.team-label {
+  display: block;
+  font-family: var(--font-headline);
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-primary, #00e5a0);
+  margin-bottom: 0.75rem;
+}
+
+.team-title {
+  font-family: var(--font-headline);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 800;
+  color: var(--color-neutral, #fff);
+  line-height: 1.15;
+  margin-bottom: 0.75rem;
+}
+
+.team-subtitle {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.45);
+  max-width: 380px;
+  line-height: 1.7;
+}
+
+.team-cta {
+  font-family: var(--font-headline);
+  font-size: 0.85rem;
+  color: var(--color-primary, #00e5a0);
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-primary, #00e5a0);
+  padding-bottom: 2px;
+  white-space: nowrap;
+  align-self: flex-end;
+  transition: opacity 0.2s ease;
+}
+
+.team-cta:hover {
+  opacity: 0.7;
+}
+
+/* ── About / Misión & Visión ────────────────────── */
+.team-about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 16px;
+}
+
+.team-about-desc {
+  display: flex;
+  align-items: center;
+  padding-right: 1.5rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.team-about-desc p {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.8;
+}
+
+.team-about-desc strong {
+  color: var(--color-primary, #00e5a0);
+  font-family: var(--font-headline);
+}
+
+.team-mv {
+  display: flex;
+  flex-direction: column;
+}
+
+.team-mv-item {
+  padding: 0.75rem 0 0.75rem 1.5rem;
+}
+
+.team-mv-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.07);
+  margin: 0 1.5rem;
+}
+
+.team-mv-label {
+  display: block;
+  font-family: var(--font-headline);
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-primary, #00e5a0);
+  margin-bottom: 0.5rem;
+}
+
+.team-mv-text {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.4);
+  line-height: 1.7;
+}
+
+/* ── Members grid ───────────────────────────────── */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+/* ── Responsive ─────────────────────────────────── */
+@media (max-width: 900px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .team-about {
+    grid-template-columns: 1fr;
+  }
+
+  .team-about-desc {
+    padding-right: 0;
+    padding-bottom: 1.5rem;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  }
+
+  .team-mv-item {
+    padding-left: 0;
+  }
+
+  .team-mv-divider {
+    margin: 0;
+  }
+}
+
+@media (max-width: 560px) {
+  .team-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+}

@@ -8,7 +8,7 @@ const NAV_LINKS: NavLink[] = [
   { label: "Servicios", type: "navigate", path: "/" },
   { label: "Procesos", type: "scroll", path: "#process" },
   { label: "Industria", type: "scroll", path: "#industry" },
-  { label: "Team", type: "scroll", path: "#team" },
+  { label: "Nosotros", type: "scroll", path: "/about" },
   { label: "Contacto", type: "navigate", path: "/contact" },
 ];
 
