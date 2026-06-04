@@ -1,4 +1,5 @@
 import './Footer.css'
+import logoRemoved from "../../assets/images/logoRemoved.png";
 import { FaWhatsapp, FaPhone, FaEnvelope, FaMapMarkerAlt, FaLinkedin, FaFacebook, FaInstagram } from 'react-icons/fa'
 
 export function Footer() {
@@ -7,7 +8,7 @@ export function Footer() {
       <div className="footer-inner">
         <div className="footer-col footer-brand-col">
           <img
-            src="/src/assets/images/LogoRemoved.png"
+            src={logoRemoved}
             alt="ALF Ingeniería Eléctrica"
             className="footer-logo"
           />

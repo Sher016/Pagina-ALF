@@ -5,6 +5,7 @@ import { useNavbar } from "./Navbar.hook.ts";
 import type { NavLink } from "./Navbar.hook.ts";
 import { Link } from "react-router-dom";
 import { ThemeToggle } from "../themeToggle/ThemeToggle.tsx";
+import logoRemoved from "../../assets/images/logoRemoved.png";
 
 function NavLinkItem({
   link,
@@ -56,16 +57,9 @@ export function Navbar() {
   return (
     <>
       <header className="site-header">
-        {/* <div className="brand">
-          <img
-            src="/src/assets/images/LogoRemoved.png"
-            alt="ALF Ingeniería Eléctrica"
-            className="brand-logo"
-          />
-        </div> */}
         <Link to="/" className="brand">
           <img
-            src="/src/assets/images/LogoRemoved.png"
+            src={logoRemoved}
             alt="ALF Ingeniería Eléctrica"
             className="brand-logo"
           />
