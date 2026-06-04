@@ -44,7 +44,7 @@ html {
   text-align: center;
   max-width: 960px;
   margin: 0 auto;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid var(--border-soft);
 }
 
 .section-title {

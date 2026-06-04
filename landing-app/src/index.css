@@ -1,17 +1,63 @@
+
 :root {
-  /* --color-primary: #10b981; */
   --color-primary: #8DC63F;
   --color-secondary: #facd15;
   --color-tertiary: #0f172a;
   --color-neutral: #ffffff;
   --bg-dark: #0A0A0A;
+  --bg-card: var(--bg-card);
+  --border-subtle: var(--border-subtle);
+  --text-muted: var(--text-muted);
+  --text-soft: var(--text-soft);
   --font-headline: 'Space Grotesk', sans-serif;
   --font-body: 'Inter', sans-serif;
+ --border-subtle: rgba(255, 255, 255, 0.07);
+  --border-soft:   rgba(255, 255, 255, 0.1);
+  --bg-card:       rgba(255, 255, 255, 0.03);
+  --bg-card-hover: rgba(255, 255, 255, 0.05);
+  --text-muted:    rgba(255, 255, 255, 0.45);
+  --text-soft:     rgba(255, 255, 255, 0.4);
+  --text-dim:      rgba(255, 255, 255, 0.25);
+  --text-bright:   rgba(255, 255, 255, 0.75);
+  --text-faint:    rgba(255, 255, 255, 0.35);
+  --bg-card-solid: transparent;
+  --team-card-gradient: var(--bg-dark);
+  --bg-featured: var(--bg-card);
+  --color-star: var(--color-primary);
+  --icon-stroke: rgba(255, 255, 255, 0.9);
+  --icon-bg: rgba(255, 255, 255, 0.05);
+  
 }
 
-* {
-  box-sizing: border-box;
+html.light {
+  --border-subtle: rgba(0, 0, 0, 0.07);
+  --border-soft: rgba(0, 0, 0, 0.1);
+  --bg-card: rgba(0, 0, 0, 0.03);
+  --bg-card-hover: rgba(0, 0, 0, 0.05);
+  --text-muted: rgba(0, 0, 0, 0.45);
+  --text-soft: rgba(0, 0, 0, 0.4);
+  --text-dim: rgba(0, 0, 0, 0.25);
+  --text-bright:   rgba(0, 0, 0, 0.80);
+  --text-faint:    rgba(0, 0, 0, 0.6);
+  --bg-card-solid: #ffffff;
+  --team-card-gradient: #ffffff;
+  --bg-featured: #ffffff;
+  --shadow-card: 0 2px 12px rgba(0, 0, 0, 0.08);
+  --color-star: #facd15;
+  --icon-stroke: rgba(15, 23, 42, 0.85);
+  --icon-bg: rgba(15, 23, 42, 0.04);
+  --color-neutral: #0f172a;
+  --bg-dark: #f1f5f9;
+  --bg-card: rgba(0, 0, 0, 0.03);
+  --border-subtle: rgba(0, 0, 0, 0.08);
+  --text-muted: rgba(0, 0, 0, 0.5);
+  --text-soft: rgba(0, 0, 0, 0.65);
+  --color-tertiary: #e2e8f0;
+ 
 }
+
+
+* { box-sizing: border-box; }
 
 html, body, #root {
   height: 100%;
@@ -23,15 +69,8 @@ body {
   margin: 0;
   font-family: var(--font-body);
   background: var(--bg-dark);
-  color: #f8fafc;
+  color: var(--color-neutral); 
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-button {
-  font: inherit;
-}
-
+a { color: inherit; text-decoration: none; }
+button { font: inherit; }

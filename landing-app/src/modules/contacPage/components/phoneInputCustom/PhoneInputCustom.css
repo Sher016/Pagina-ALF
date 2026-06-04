@@ -1,0 +1,61 @@
+.phone-input {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.phone-country {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.75rem 0.75rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-soft);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.phone-country:focus-within {
+  border-color: var(--color-primary);
+}
+
+.phone-flag { font-size: 1rem; line-height: 1; }
+
+.phone-calling {
+  font-size: 0.85rem;
+  color: var(--color-neutral);
+  font-family: var(--font-body);
+}
+
+.phone-arrow {
+  font-size: 0.6rem;
+  color: var(--text-soft);
+}
+
+.phone-select {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+  width: 100%;
+}
+
+.phone-number-input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-soft);
+  border-radius: 8px;
+  color: var(--color-neutral);
+  font-family: var(--font-body);
+  font-size: clamp(0.85rem, 2vw, 1rem);
+  transition: border-color 0.2s ease;
+}
+
+.phone-number-input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}

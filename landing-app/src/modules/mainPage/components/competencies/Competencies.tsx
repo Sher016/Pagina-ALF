@@ -1,43 +1,36 @@
 import './Competencies.css';
-import { FaHome, FaSolarPanel, FaIndustry, FaShieldAlt } from 'react-icons/fa';
 
 interface Competency {
-  icon: React.ReactNode;
+  icon: string;
   title: string;
   description: string;
   tags?: string[];
-  image?: string;
   featured?: boolean;
 }
 
 const competencies: Competency[] = [
   {
-    icon: <FaHome size={22} />,
-    title: 'Smart Home Automation',
-    description:
-      'Invisible integration of light, climate, and security systems tailored for luxury living.',
-    image: '/images/competencies/smart-home.jpg',
+    icon: '/src/assets/icons/icon-event.svg',
+    title: 'Instalaciones Temporales para Eventos',
+    description: 'Montaje y desmontaje de infraestructura eléctrica segura y certificada para eventos de cualquier escala.',
     featured: true,
   },
   {
-    icon: <FaSolarPanel size={22} />,
-    title: 'Renewable Systems',
-    description:
-      'Photovoltaic arrays and battery storage solutions that redefine energy independence.',
-    tags: ['Zero-Grid Impact', 'High-Density Storage'],
+    icon: '/src/assets/icons/icon-lighting.svg',
+    title: 'Iluminación Escénica y Técnica',
+    description: 'Diseño e instalación de sistemas de iluminación profesional para escenarios, auditorios y espacios de entretenimiento.',
+    tags: ['Iluminación LED', 'Control DMX'],
   },
   {
-    icon: <FaIndustry size={22}/>,
-    title: 'Industrial Grid Maintenance',
-    description:
-      'Preventative engineering for enterprise-scale manufacturing and data centers.',
+    icon: '/src/assets/icons/icon-power.svg',
+    title: 'Conexiones de Alta Potencia',
+    description: 'Suministro y conexión de energía de alta potencia para escenarios, producciones y eventos de gran formato.',
+    tags: ['Alta tensión', 'Generadores'],
   },
   {
-    icon: <FaShieldAlt size={22} />,
-    title: 'Safety & Precision Audits',
-    description:
-      'Thermographic imaging and ultrasonic testing to identify failures before they occur.',
-    image: '/images/competencies/thermal.jpg',
+    icon: '/src/assets/icons/icon-residential.svg',
+    title: 'Instalaciones Eléctricas Residenciales',
+    description: 'Proyectos eléctricos residenciales certificados RETIE, desde diseño hasta entrega, con los más altos estándares de seguridad.',
     featured: true,
   },
 ];
@@ -46,17 +39,19 @@ export function Competencies() {
   return (
     <section className="core-section" id="services">
       <div className="core-header">
-        <h2 className="core-title">Core Competencies</h2>
+        <h2 className="core-title">Nuestros Servicios</h2>
         <p className="core-subtitle">
-          From autonomous residential systems to heavy-duty industrial maintenance,
-          we provide end-to-end electrical mastery.
+          Soluciones eléctricas integrales para eventos, residencias e industria,
+          con certificación RETIE y tecnología de vanguardia.
         </p>
       </div>
 
       <div className="core-grid">
         {competencies.map((item, i) => (
           <div key={i} className={`core-card ${item.featured ? 'featured' : ''}`}>
-            <span className="core-icon">{item.icon}</span>
+            <span className="core-icon">
+              <img src={item.icon} alt={item.title} className="core-icon-svg" />
+            </span>
             <h3 className="core-card-title">{item.title}</h3>
             <p className="core-card-desc">{item.description}</p>
 
@@ -69,12 +64,6 @@ export function Competencies() {
                   </li>
                 ))}
               </ul>
-            )}
-
-            {item.image && (
-              <div className="core-card-image">
-                <img src={item.image} alt={item.title} loading="lazy" />
-              </div>
             )}
           </div>
         ))}

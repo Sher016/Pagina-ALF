@@ -5,8 +5,6 @@ export function Footer() {
   return (
     <footer className="site-footer">
       <div className="footer-inner">
-
-        {/* Columna 1 — Logo y descripción */}
         <div className="footer-col footer-brand-col">
           <img
             src="/src/assets/images/LogoRemoved.png"
@@ -24,7 +22,6 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Columna 2 — Links */}
         <div className="footer-col">
           <h4 className="footer-col-title">Navegación</h4>
           <ul className="footer-links">
@@ -36,7 +33,6 @@ export function Footer() {
           </ul>
         </div>
 
-        {/* Columna 3 — Servicios */}
         <div className="footer-col">
           <h4 className="footer-col-title">Servicios</h4>
           <ul className="footer-links">
@@ -47,7 +43,6 @@ export function Footer() {
           </ul>
         </div>
 
-        {/* Columna 4 — Contacto */}
         <div className="footer-col">
           <h4 className="footer-col-title">Contacto</h4>
           <ul className="footer-contact">
@@ -74,7 +69,6 @@ export function Footer() {
 
       </div>
 
-      {/* Bottom bar */}
       <div className="footer-bottom">
         <span>© {new Date().getFullYear()} ALF Ingeniería Eléctrica. Todos los derechos reservados.</span>
         <div className="footer-legal">

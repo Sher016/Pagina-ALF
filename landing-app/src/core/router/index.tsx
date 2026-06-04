@@ -4,6 +4,7 @@ import { AuthGuard } from "./guards";
 import { mainPageRoutes } from "../../modules/mainPage/routes";
 import { contactRoutes } from "../../modules/contacPage/routes";
 import { aboutRoutes } from "../../modules/teamPage/routes";
+import { projectsRoutes } from "../../modules/projectsPage/routes";
 
 function protectRoutes(
   elementsToProtect: AppRouteObject[],
@@ -22,6 +23,7 @@ const appRoutes: AppRouteObject[] = [
   ...mainPageRoutes,
   ...contactRoutes,
   ...aboutRoutes,
+  ...projectsRoutes,
   // ...protectRoutes(otherModuleRoutes, protectedRouteLoader),
 ];
 

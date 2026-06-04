@@ -97,7 +97,7 @@
 
 .deploy-step-desc {
   font-size: 0.8rem;
-  color: rgba(255, 255, 255, 0.45);
+  color: var(--text-muted);
   line-height: 1.5;
   text-align: center;
 }

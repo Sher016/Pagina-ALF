@@ -1,4 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
+import img1 from '../../../../assets/images/1.jpg'
+import img2 from '../../../../assets/images/2.jpg'
+import img3 from '../../../../assets/images/3.jpg'
 
 export function useHeroCarousel() {
   interface Slide {
@@ -13,16 +16,16 @@ export function useHeroCarousel() {
 
   const slides: Slide[] = [
     {
-      image: "/images/carousel/slide-1.jpg",
+      image: img1,
       tag: "System Online",
       title: "Precision",
       highlight: "Engineering",
       subtitle: "For The Modern Grid.",
       primaryCta: { label: "View Blueprint", href: "#services" },
-      secondaryCta: { label: "Our Portfolio", href: "#projects" },
+      secondaryCta: { label: "Nuestro Portfolio", href: "/projects" },
     },
     {
-      image: "/images/carousel/slide-2.jpg",
+      image: img2,
       tag: "Industrial Grade",
       title: "Sustainable",
       highlight: "Infrastructure",
@@ -31,7 +34,7 @@ export function useHeroCarousel() {
       secondaryCta: { label: "Contact Us", href: "/contact" },
     },
     {
-      image: "/images/carousel/slide-3.jpg",
+      image: img3,
       tag: "Certified Experts",
       title: "Safety &",
       highlight: "Precision",
